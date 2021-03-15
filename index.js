@@ -13,11 +13,14 @@ io.on('connect', socket => {
     socket.on('openRoom',(message)=>{
         console.log("message",message);
         console.log("SocketID",socket.id);
+        socket.join("tracking1")
     })
 
     socket.on('updateLatLng', (message) => {
         console.log(message);
         socket.join('track1')
         io.emit('loadLatLng',{msg:message,ip:socket.handshake.address})
+
+        io.to("tracking1").emit('loadLatLng',{msg:message,ip:socket.handshake.address,rooms:"tracking1"})
     })
 });
