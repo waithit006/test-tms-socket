@@ -11,7 +11,8 @@ io.on('connect', socket => {
 
 
     socket.on('openRoom',(message)=>{
-        console.log(message);
+        console.log("message",message);
+        console.log("SocketID",socket.id);
     })
 
     socket.on('updateLatLng', (message) => {
