@@ -7,7 +7,9 @@ http.listen(4001, () => {
 });
 
 io.on('connect', socket => {
+    console.log("Connected");
     socket.on('updateLatLng', (message) => {
-        console.log(message);
+        socket.emit('loadLatLng',{msg:message,ip:socket.handshake.address})
     })
+    
 });
