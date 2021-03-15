@@ -9,7 +9,11 @@ http.listen(4001, () => {
 io.on('connect', socket => {
     console.log("Connected");
     socket.on('updateLatLng', (message) => {
+        console.log("Session ID : "  + io.sockets);
         console.log(message);
         io.emit('loadLatLng',{msg:message,ip:socket.handshake.address})
     })
+
+
+    
 });
