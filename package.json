@@ -1,0 +1,22 @@
+{
+  "name": "pramool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "luxon": "^1.25.0",
+    "moment": "^2.29.0",
+    "moment-timezone": "^0.5.32",
+    "nodemon": "^2.0.4",
+    "random": "^2.2.0",
+    "random-picture": "^4.0.2",
+    "socket.io": "^2.3.0"
+  }
+}
